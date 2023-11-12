@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 if (document.getElementById('checkboxTheme')) {
-    document.getElementById('checkboxTheme').checked = true
+    document.getElementById('checkboxTheme').checked = false
     document.getElementById('checkboxTheme').addEventListener('click', () => {
 
         console.log("checkboxTheme");
