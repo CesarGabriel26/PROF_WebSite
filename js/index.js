@@ -193,7 +193,13 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 if (document.getElementById('checkboxTheme')) {
-    document.getElementById('checkboxTheme').checked = false
+
+    if (localStorage.getItem('theme') == "dark") {
+        document.getElementById('checkboxTheme').checked = true
+    }else{
+        document.getElementById('checkboxTheme').checked = false
+    }
+    
     document.getElementById('checkboxTheme').addEventListener('click', () => {
 
         console.log("checkboxTheme");
