@@ -59,7 +59,7 @@ function Perguntar(pergunta){
 
                     </div>
                     <div>
-                        ${document.getElementById('floatingInputValue').value}
+                        ${pergunta}
                     </div>
                 </div>
             `
