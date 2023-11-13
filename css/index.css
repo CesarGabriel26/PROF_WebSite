@@ -141,3 +141,28 @@ input:checked+.slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+
+
+
+
+.card-pergunta {
+    top: -100px;
+    left: 30%;
+
+    height: 40px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid var(--bs-secondary);
+    border-radius: 5px;
+}
+
+.card-pergunta:hover {
+    color: var(--bs-light);
+    border: 2px solid var(--bs-info);
+}

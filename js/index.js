@@ -32,46 +32,50 @@ if (document.getElementById('floatingInputValue')) {
 
         if (e.key === 'Enter') {
             e.preventDefault()
-            var data = ReturnData()
-
-            data.forEach((item, id) => {
-
-                if (item.recive == document.getElementById('floatingInputValue').value) {
-
-                    document.querySelector('.chat').innerHTML += `
-                        <div class="d-flex p-4">
-                            <div class="flex-shrink-0 flex flex-col relative items-end me-4">
-                                <div>
-                                    <div class="d-flex align-items-center justify-content-center"
-                                        style="width: 36px; height: 36px;">
-
-                                        <img src="img/user.png" class="w-100 h-100 ">
-
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div>
-                                ${document.getElementById('floatingInputValue').value}
-                            </div>
-                        </div>
-                    `
-
-                    reponde(item.response, id)
-                    if (newChat) {
-                        AddChatHistory(item.chatName)
-                        newChat = false
-                    }
-
-
-                    document.getElementById('floatingInputValue').value = ""
-                }
-            })
+            Perguntar(document.getElementById('floatingInputValue').value)
         }
-
 
     })
 }
+
+function Perguntar(pergunta){
+    var data = ReturnData()
+    data.forEach((item, id) => {
+
+        if (item.recive == pergunta) {
+            document.getElementById("card-pergunta").style.display = "none"
+
+            document.querySelector('.chat').innerHTML += `
+                <div class="d-flex p-4">
+                    <div class="flex-shrink-0 flex flex-col relative items-end me-4">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-center"
+                                style="width: 36px; height: 36px;">
+
+                                <img src="img/user.png" class="w-100 h-100 ">
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        ${document.getElementById('floatingInputValue').value}
+                    </div>
+                </div>
+            `
+
+            reponde(item.response, id)
+            if (newChat) {
+                AddChatHistory(item.chatName)
+                newChat = false
+            }
+
+
+            document.getElementById('floatingInputValue').value = ""
+        }
+    })
+}
+
 if (document.querySelector('.newchat')) {
     document.querySelector('.newchat').addEventListener('click', () => {
         newChat = true

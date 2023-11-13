@@ -181,14 +181,19 @@
 
             <section class="chat overflow-y-scroll container">
 
-
-
+                
             </section>
 
-            <div class="mainfooter p-2">
+            <div class="mainfooter p-2 position-relative">
+                <div class="row position-absolute card-pergunta" id="card-pergunta">
+                    <div class="col-12" onclick="Perguntar('poderia me mostrar uma redação nota mil')">
+                        poderia me mostrar uma redação nota mil
+                    </div>
+                </div>
+
 
                 <form class="form-floating m-0">
-                    <input type="text" class="form-control" id="floatingInputValue" placeholder=".">
+                    <input type="text" class="form-control" disabled id="floatingInputValue" placeholder=".">
                     <label for="floatingInputValue">Enviar uma mensagem</label>
                 </form>
 

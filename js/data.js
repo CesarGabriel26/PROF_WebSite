@@ -1,7 +1,7 @@
 function ReturnData() {
     return [
         {
-            recive: "poderia me mostrar uma redação nota mil sobre",
+            recive: "poderia me mostrar uma redação nota mil",
             response: `
                 Não posso lhe dar a resposta pronta mocinho, mas, escrever uma redação nota mil envolve alguns passos importantes. 
                 Aqui está um guia simplificado que pode ajudar:
